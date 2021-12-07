@@ -17,6 +17,10 @@ docker run --rm \
 2. Environment variables .env
 
 In project directory make copy of .env.example file and rename it to .env
+or simply use command:
+```bash
+cp .env.example .env
+```
 
 3. Starting & Stopping Sail
 
@@ -25,16 +29,31 @@ Before starting Sail, you should ensure that no other web servers or databases a
 ```bash
 ./vendor/bin/sail up
 ```
+However, instead of repeatedly typing `./vendor/bin/sail` to execute Sail commands, you may wish to configure a Bash alias that allows you to execute Sail's commands more easily:
 
-Once the application's Docker containers have been started, you can access the application in your web browser at: http://localhost
-
+```bash
+alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
+```
 
 To start all of the Docker containers in the background, you may start Sail in "detached" mode:
 ```bash
-./vendor/bin/sail up -d
+sail up -d
 ```
 To stop all of the containers, you may simply press Control + C to stop the container's execution. Or, if the containers are running in the background, you may use the stop command:
 ```bash
-./vendor/bin/sail stop
+sail stop
 ```
 Form more information about how Laravel Sail is interacting with Docker environment visit [Laravel Sail](https://laravel.com/docs/8.x/sail) official documentation
+
+# Usage
+
+Once the application's Docker containers have been started, you can access the application in your web browser at: http://localhost
+
+On localhost development mode if u want to make some changes into JS files you should run yarn:
+```bash
+sail yarn
+```
+
+# Support
+
+If u stuck and can't run all this commands properly contact: [vati@redberry.ge](mailto:vati@redberry.ge)
