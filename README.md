@@ -24,6 +24,10 @@ Before starting Sail, you should ensure that no other web servers or databases a
 ```bash
 ./vendor/bin/sail up
 ```
+
+Once the application's Docker containers have been started, you can access the application in your web browser at: http://localhost
+
+
 To start all of the Docker containers in the background, you may start Sail in "detached" mode:
 ```bash
 ./vendor/bin/sail up -d
