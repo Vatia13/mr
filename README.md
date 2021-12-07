@@ -15,6 +15,7 @@ docker run --rm \
     composer install --ignore-platform-reqs
 ```
 2. Environment variables .env
+
 In project directory make copy of .env.example file and rename it to .env
 
 3. Starting & Stopping Sail
