@@ -14,8 +14,10 @@ docker run --rm \
     laravelsail/php80-composer:latest \
     composer install --ignore-platform-reqs
 ```
+2. Environment variables .env
+In project directory make copy of .env.example file and rename it to .env
 
-2. Starting & Stopping Sail
+3. Starting & Stopping Sail
 
 Before starting Sail, you should ensure that no other web servers or databases are running on your local computer. To start all of the Docker containers defined in your application's docker-compose.yml file, you should execute the up command:
 
